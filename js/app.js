@@ -8,8 +8,12 @@ var app = angular.module("socialpostal", ['ui.router', 'ui.bootstrap'])
 
         $urlRouterProvider.otherwise('/');
 
+        $httpProvider.interceptors.push('authInterceptor')
+
+
     })
 
+  .constant('API', 'http://localhost:3000/api/')
 
   .run(function ($state) {
       $state.go('home');

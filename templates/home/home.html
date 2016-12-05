@@ -54,22 +54,22 @@
                 <div class="form-group">
                   <div class="input-group">
                     <div class="input-group-addon"><i class="fa fa-user" aria-hidden="true" style="color: orange;"></i></div>
-                    <input type="email" class="form-control" placeholder="Email">
+                    <input ng-model="user.email" type="email" class="form-control" placeholder="Email">
                   </div>
                 </div>
                 <div class="form-group">
                   <div class="input-group">
                     <div class="input-group-addon"><i class="fa fa-key" aria-hidden="true" style="color: orange;"></i></div>
-                    <input type="password" class="form-control" placeholder="Password">
+                    <input ng-model="user.password" type="password" class="form-control" placeholder="Password">
                   </div>
                 </div>
                 <div class="form-group">
                   <div class="input-group">
                     <div class="input-group-addon"><i class="fa fa-key" aria-hidden="true" style="color: orange;"></i></div>
-                    <input type="password" class="form-control" placeholder="Confirm Password">
+                    <input ng-model="user.passwordconfirm" type="password" class="form-control" placeholder="Confirm Password">
                   </div>
                 </div>
-                <button type="submit" class="btn btn-warning">Sign Up</button>
+                <button ng-click="vm.signUp(user)" type="submit" class="btn btn-warning">Sign Up</button>
               </form>
               </br>
               <p>Already a member | <span ng-click="vm.flipSignIn = !vm.flipSignIn" style="color: orange; cursor: pointer;">Sign In</span></p>
